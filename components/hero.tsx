@@ -2,13 +2,14 @@
 
 import { motion, useScroll, useTransform } from "framer-motion"
 import { Play, Star, Clock, Phone } from "lucide-react"
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 
 export function Hero() {
   const { scrollY } = useScroll()
-  const y1 = useTransform(scrollY, [0, 500], [0, 150])
-  const rotate = useTransform(scrollY, [0, 500], [0, 30])
+  // const y1 = useTransform(scrollY, [0, 500], [0, 150])
+  // const rotate = useTransform(scrollY, [0, 500], [0, 30])
 
   return (
     <section className="relative pt-40 pb-24 overflow-hidden bg-white">
@@ -40,12 +41,14 @@ export function Hero() {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center gap-8 justify-center lg:justify-start">
-              <Button
-                size="lg"
-                className="bg-[#EA580C] hover:bg-[#C2410C] text-white rounded-full px-12 h-20 text-xl font-black shadow-2xl shadow-orange-500/30 transition-all active:scale-95"
-              >
-                ORDER NOW
-              </Button>
+              <Link href="https://nutri-luxe.vercel.app/menu">
+                <Button
+                  size="lg"
+                  className="bg-[#EA580C] hover:bg-[#C2410C] text-white rounded-full px-12 h-20 text-xl font-black shadow-2xl shadow-orange-500/30 transition-all active:scale-95"
+                >
+                  ORDER NOW
+                </Button>
+              </Link>
               <button className="flex items-center gap-4 group transition-all active:scale-95">
                 <div className="w-16 h-16 rounded-full bg-white shadow-xl flex items-center justify-center group-hover:bg-gray-50 border border-gray-100 transition-colors">
                   <Play className="w-6 h-6 text-[#EA580C] fill-[#EA580C] ml-1" />
@@ -56,7 +59,7 @@ export function Hero() {
           </motion.div>
 
           <div className="flex-1 relative">
-            <motion.div style={{ y: y1, rotate }} className="relative z-10">
+            <motion.div className="relative z-10">
               <div className="relative w-full aspect-square max-w-[650px] mx-auto">
                 {/* Large Round Dish Container - Exactly as per Image */}
                 <div className="absolute inset-0 bg-[#15803D] rounded-full border-[2.5rem] border-[#15803D] shadow-[0_50px_100px_rgba(0,0,0,0.15)] overflow-hidden">

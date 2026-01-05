@@ -33,25 +33,25 @@ export function Navbar() {
         </Link>
 
         <div className="hidden md:flex items-center gap-10 text-base font-bold text-[#0A2E2A]">
-          <Link href="#menu" className="hover:text-[#15803D] transition-colors relative group">
-            Special Offers
+          <Link href="/" className="hover:text-[#15803D] transition-colors relative group">
+            Home
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#15803D] transition-all group-hover:w-full" />
           </Link>
-          <Link href="#menu" className="hover:text-[#15803D] transition-colors relative group">
-            Our Menu
+          <Link href="/About" className="hover:text-[#15803D] transition-colors relative group">
+            About
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#15803D] transition-all group-hover:w-full" />
           </Link>
           <Link href="#contact" className="hover:text-[#15803D] transition-colors relative group">
             Contact
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#15803D] transition-all group-hover:w-full" />
           </Link>
-          <Link href="#" className="hover:text-[#15803D] transition-colors relative group">
+          {/* <Link href="#" className="hover:text-[#15803D] transition-colors relative group">
             Track Food
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#15803D] transition-all group-hover:w-full" />
-          </Link>
+          </Link> */}
         </div>
 
-        <div className="flex items-center gap-6">
+        {/* <div className="flex items-center gap-6">
           <div className="hidden lg:flex items-center bg-[#F9FAFB] border border-[#E5E7EB] rounded-full px-6 py-2.5 shadow-sm focus-within:ring-2 focus-within:ring-[#15803D]/20 transition-all">
             <Search className="w-5 h-5 text-gray-400 mr-3" />
             <input
@@ -71,7 +71,7 @@ export function Navbar() {
           <Button variant="ghost" size="icon" className="md:hidden text-[#0A2E2A]">
             <Menu className="w-8 h-8" />
           </Button>
-        </div>
+        </div> */}
       </div>
     </motion.nav>
   )

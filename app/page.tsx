@@ -2,7 +2,7 @@
 
 import { Navbar } from "@/components/navbar"
 import { Hero } from "@/components/hero"
-import { Accreditations } from "@/components/accreditations"
+// import { Accreditations } from "@/components/accreditations"
 import { ContactSection } from "@/components/contact-section"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
@@ -63,7 +63,7 @@ export default function Home() {
       <Navbar />
       <Hero />
 
-      <Accreditations />
+      {/* <Accreditations /> */}
 
       {/* Why Choose Us - Exactly as per Image */}
       <section className="py-24 bg-white">
